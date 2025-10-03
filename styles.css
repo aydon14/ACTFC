@@ -1,0 +1,177 @@
+html {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100%; /* Ensures it takes the full viewport height */
+    margin: 0;
+    background-color: rgb(0, 0, 40);
+}
+
+body {
+    min-width: 800px;
+    max-width: 800px;
+    height: 100vh;
+    background-color: rgba(0, 0, 120, 0.8);
+    margin: 0 auto;
+    border-left: 1px solid yellow;
+    border-right:1px solid yellow;
+    overflow: hidden;
+    
+}
+
+header {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+    padding: 10px;
+    text-align: center;
+    font-size: 34px;
+}
+
+a {
+    color: yellow;
+}
+
+.main-content {
+    margin: 0;
+    padding: 15px;
+    font-size: 24px;
+    color: yellow;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.start-button {
+    width: 180px;
+    font-size: 28px;
+    padding: 0px;
+    border: 3px solid grey;
+    background-color: rgba(255, 255, 0, 0.9);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: rgba(255, 255, 0, 0.7);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+}
+
+.start-button:active {
+    background-color: rgba(255, 255, 0, 0.5);
+    transition: 0s;
+    transform: scale(0.97) translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+}
+
+.flag-box {
+    display: flex;
+    margin: 30px 0 15px 0;
+    gap: 8px;
+}
+
+.text-box {
+    font-size: 18px;
+    border: 3px solid grey;
+    height: 26px;
+    min-width: 650px;
+    max-width: 650px;
+    background: rgb(200, 200, 200);
+    color: rgb(100, 100, 100);
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.text-box:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: gray;
+    color: black;
+}
+
+.submit {
+    font-size: 20px;
+    width: 100%;
+    border: 3px solid grey;
+    background-color: rgba(255, 255, 0, 0.9);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: rgba(255, 255, 0, 0.7);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+}
+
+.submit:active {
+    background-color: rgba(255, 255, 0, 0.5);
+    transition: 0s;
+    transform: scale(0.97) translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+}
+
+.challenge-files {
+    margin: 30px 0 0 0;
+}
+
+.challenge-files table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.challenge-files th, .challenge-files td {
+    border: 1px solid yellow;
+    padding: 4px;
+    text-align: left;
+}
+
+.challenge-files td.filename-col {
+    padding-left: 8px;
+}
+
+.challenge-files td.download-col {
+    width: 120px;
+    text-align: center;
+    padding: 0;
+}
+
+.challenge-files td.hash-col {
+    width: 63px;
+    text-align: center;
+    cursor:pointer;
+    text-decoration: underline;
+    transition: background-color 0.3s;
+}
+
+.challenge-files th {
+    color: yellow;
+}
+
+.download-col button {
+    background: none;
+    border: none;
+    color: yellow; /* or your preferred link color */
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    font: inherit;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.hash-col:active,
+.download-col button:active {
+    background-color: #222; /* or any dark color you prefer */
+    color: yellow; /* optional for contrast */
+    transition: background-color 0.3s;
+}
