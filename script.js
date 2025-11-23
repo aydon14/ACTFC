@@ -76,8 +76,11 @@ async function processChallenge(c) {
     const data = await loadChallenges();
     const challenge = data.challenges[parseInt(c, 10) - 1];
     var main_content = document.querySelector(".main-content");
-
-    main_content.innerHTML = `Current Challenge: ${localStorage.getItem("current_challenge")}/${data.total} - ${challenge.title}<br><br>`;
+    if (localStorage.getItem("current_challenge") <= parseInt(data.total)){
+        main_content.innerHTML = `Current Challenge: ${localStorage.getItem("current_challenge")}/${data.total} - ${challenge.title}<br><br>`;
+    } else {
+        main_content.innerHTML = `Current Challenge: ${challenge.title}<br><br>`;
+    }
     await processMdFile(challenge.hash);
 }
 
@@ -120,7 +123,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         main_content.innerHTML = text;
         document.querySelector(".start-button").addEventListener("click", () => {
             localStorage.setItem("current_challenge", "1");
-            localStorage.setItem("current_flag", "sample");
+            localStorage.setItem("current_flag", "start");
             location.reload();
         });
         return;
@@ -132,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             main_content.innerHTML += "No challenges available at the moment. Please check back later.";
             return;
         } else await processChallenge(currentChallenge);
-        if(parseInt(currentChallenge) < cData.total) { 
+        if(parseInt(currentChallenge) <= cData.total) { 
             main_content.style.textAlign = "left";
             if (challenge.files && challenge.files.length > 0) {
                 let tableHTML = `<div class="challenge-files"><table>`;

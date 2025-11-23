@@ -1,29 +1,15 @@
 {
-    "total": 4,
+    "total": 1,
     "challenges": [
         {
-            "title": "Sample",
-            "hash": "104d8806c53c449c95dfdbd7195f8ca10abc220dbc2301b51c58efd727587dc0",
+            "title": "Sample 1",
+            "hash": "af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf",
             "files": [
                 {
                     "filename": "flag.txt",
-                    "hash": "6946cf9ab3ab120bba8354cfc0a1c614bb0245ca82c882cf6896f0992c8898da"
+                    "hash": "6c36664282dfc9578d2f054f0c16d9c7caeec3936bc12bf0700d11f92c60ae37"
                 }
             ]
-        },
-        {
-            "title": "Starting Off Strong...",
-            "hash": "34e210b4e0f2291831c8f0182f87548430d83f478756f83f09d28365f7d12db8",
-            "files": [
-                {
-                    "filename": "steg.png",
-                    "hash": "6c879e787e6a3063e83f353240cf9700a5159a4c3177fbd27943a1a2b192b0dc"
-                }
-            ]
-        },
-        {
-            "title": "Base-what???",
-            "hash": "210ff5102e7c14a3e89f4aa7633935be0b766f0289967493d44bb0c35b9e1fcd"
         },
         {
             "title": "Finale",
